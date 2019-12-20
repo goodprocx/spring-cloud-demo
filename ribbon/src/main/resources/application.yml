@@ -4,6 +4,8 @@ eureka:
       defaultZone: http://localhost:8801/eureka/
 server:
   port: 8802
+  servlet:
+    context-path: /ribbon-provider
 spring:
   application:
     name: ribbon-provider
