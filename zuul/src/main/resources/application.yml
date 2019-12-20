@@ -1,0 +1,19 @@
+server:
+  port: 8900  #端口号
+spring:
+  application:
+    name: service-zuul  #服务注册中心测试名
+zuul:
+  routes:
+    feign-consumer:  /feign-consumer/**
+    ribbon-provider: /ribbon-provider/**
+#    api-a:
+#      path: /feign-consumer/**
+#      serviceId: feign-consumer  #如果是/ribbon/**路径下的请求，则跳转到service-ribbon
+#    api-b:
+#      path: /ribbon-provider/**
+#      serviceId: ribbon-provider  #如果是/feign/**路径下的请求，则跳转到service-feign
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8801/eureka/  #服务注册中心
