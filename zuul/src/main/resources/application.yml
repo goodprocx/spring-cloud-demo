@@ -1,19 +1,19 @@
 server:
-  port: 8900  #¶Ë¿ÚºÅ
+  port: 8900  #ç«¯å£å·
 spring:
   application:
-    name: service-zuul  #·şÎñ×¢²áÖĞĞÄ²âÊÔÃû
+    name: service-zuul  #æœåŠ¡æ³¨å†Œä¸­å¿ƒæµ‹è¯•å
 zuul:
   routes:
     feign-consumer:  /feign-consumer/**
     ribbon-provider: /ribbon-provider/**
 #    api-a:
 #      path: /feign-consumer/**
-#      serviceId: feign-consumer  #Èç¹ûÊÇ/ribbon/**Â·¾¶ÏÂµÄÇëÇó£¬ÔòÌø×ªµ½service-ribbon
+#      serviceId: feign-consumer  #å¦‚æœæ˜¯/ribbon/**è·¯å¾„ä¸‹çš„è¯·æ±‚ï¼Œåˆ™è·³è½¬åˆ°service-ribbon
 #    api-b:
 #      path: /ribbon-provider/**
-#      serviceId: ribbon-provider  #Èç¹ûÊÇ/feign/**Â·¾¶ÏÂµÄÇëÇó£¬ÔòÌø×ªµ½service-feign
+#      serviceId: ribbon-provider  #å¦‚æœæ˜¯/feign/**è·¯å¾„ä¸‹çš„è¯·æ±‚ï¼Œåˆ™è·³è½¬åˆ°service-feign
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8801/eureka/  #·şÎñ×¢²áÖĞĞÄ
+      defaultZone: http://localhost:8801/eureka/  #æœåŠ¡æ³¨å†Œä¸­å¿ƒ
